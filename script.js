@@ -16,8 +16,11 @@ FSJS project 2 - List Filter and Pagination
    will only be used inside of a function, then it can be locally 
    scoped to that function.
 ***/
-const list = document.getElementsByClassName('student-item cf');
-const page = ;
+const studentList = document.getElementsByClassName('student-item cf');
+const page = Math.ceil(studentList.length/10);
+
+console.log(`This is the student list,`+studentList);
+console.log(`This is how many pages there will be `+page);
 
 
 
@@ -35,7 +38,7 @@ const page = ;
        that will be passed into the parens later when you call or 
        "invoke" the function 
 ***/
-function showPage(list, page) {
+function showPage(studentList, page) {
   /* 
    loop over items in list paramaters
    if the index of a list item is >= the index of the first
